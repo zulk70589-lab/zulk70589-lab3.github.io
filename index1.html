@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LMS Demo - Teknologi Digital & Inovasi</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">LMS</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#dashboard" class="active">🏠 Dashboard</a></li>
+        <li><a href="#courses">📚 Kursus</a></li>
+        <li><a href="#assignments">📝 Tugas</a></li>
+        <li><a href="#forum">💬 Forum</a></li>
+        <li><a href="#grades">📊 Nilai</a></li>
+        <li><a href="#profile">👤 Profil</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1 id="page-title">Dashboard</h1>
+      <div class="user-info">
+        <span id="welcome">Halo, Mahasiswa</span>
+        <button id="logoutBtn" title="Logout">Logout</button>
+      </div>
+    </header>
+
+    <!-- PAGES -->
+    <section id="dashboard" class="page active">
+      <h2>Ringkasan Belajar</h2>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Kursus Aktif</div>
+          <div class="card-value" id="card-courses">1</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Tugas Belum</div>
+          <div class="card-value" id="card-assignments">2</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Progress</div>
+          <div class="card-value"><span id="global-progress">0</span>%</div>
+        </div>
+      </div>
+
+      <h3>Daftar Kursus</h3>
+      <div class="courses" id="course-list">
+        <!-- Kursus dibuat dari JS -->
+      </div>
+    </section>
+
+    <section id="courses" class="page">
+      <h2>Daftar Kursus</h2>
+      <div class="courses" id="all-courses">
+        <!-- Diisi JS -->
+      </div>
+    </section>
+
+    <section id="course-detail" class="page">
+      <button id="backToCourses" class="btn-flat">← Kembali</button>
+      <div id="course-content">
+        <!-- Isi detail kursus oleh JS -->
+      </div>
+    </section>
+
+    <section id="assignments" class="page">
+      <h2>Daftar Tugas</h2>
+      <div id="assignment-list"></div>
+    </section>
+
+    <section id="forum" class="page">
+      <h2>Forum Diskusi</h2>
+      <div class="forum" id="forum-area">
+        <div id="threads"></div>
+        <textarea id="thread-input" placeholder="Tulis topik atau pertanyaan..."></textarea>
+        <button id="post-thread">Kirim</button>
+      </div>
+    </section>
+
+    <section id="grades" class="page">
+      <h2>Rekap Nilai</h2>
+      <div id="grades-area"></div>
+    </section>
+
+    <section id="profile" class="page">
+      <h2>Profil Saya</h2>
+      <div class="profile">
+        <img src="https://via.placeholder.com/100" alt="Foto Profil">
+        <div class="info">
+          <p><strong>Nama:</strong> <span id="profile-name">Mahasiswa</span></p>
+          <p><strong>Email:</strong> <span id="profile-email">user@example.com</span></p>
+          <p><strong>Kelas:</strong> 12 RPL 2</p>
+          <button id="edit-profile">Edit Profil</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
